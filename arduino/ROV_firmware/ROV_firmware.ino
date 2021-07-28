@@ -7,12 +7,18 @@ Servo thr_left;
 Servo thr_right;
 Servo thr_vertical;
 
+// изменить в соответствии со своей конфигурацией
+//!!
 int thr_left_dir = 1; //0-revers
 int thr_right_dir = 1; //0-revers
 int thr_vertical_dir = 1; // 0 -revers
+//!!
 
+// изменить в соответствии со своей конфигурацией
+//!!
 float thr_left_k = 0.7; // 0.1 ..1
 float thr_right_k = 1; // 0.1..1
+//!!
 
 void move_linear(int spd);
 void rotate(int spd);
@@ -32,9 +38,12 @@ void setup()
 {
   Serial.begin(9600);
   
-  thr_left.attach(3); //horizontal
-  thr_right.attach(6); //vertical
-  thr_vertical.attach(5);  //horizontal
+  // изменить в соответсвии со своей конфигурацией
+  //!!
+  thr_left.attach(3);
+  thr_right.attach(6); 
+  thr_vertical.attach(5);  
+  //!!
   
   thr_left.writeMicroseconds(MOTOR_STOP);
   thr_right.writeMicroseconds(MOTOR_STOP); 

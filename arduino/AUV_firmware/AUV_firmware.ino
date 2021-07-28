@@ -66,12 +66,18 @@ Servo thr_left;
 Servo thr_right;
 Servo thr_vertical;
 
+// изменить в соответствии со своей конфигурацией
+//!!
 int thr_left_dir = 1; //0-revers
 int thr_right_dir = 1; //0-revers
 int thr_vertical_dir = 1; // 0 -revers
+//!!
 
+// изменить в соответствии со своей конфигурацией
+//!!
 float thr_left_k = 0.7; // 0.1 ..1
 float thr_right_k = 1; // 0.1..1
+//!!
 
 void move_linear(int spd);
 void rotate(int spd);
@@ -87,16 +93,18 @@ int led_state = HIGH;
 
 int counter;
 int state = 0;
-
 int action=0;
 
 void setup() 
 {
   RemoteXY_Init (); 
 
+// изменить в соответствии со своей конфигурацией
+//!!
   thr_left.attach(3); //horizontal
   thr_right.attach(5); //vertical
   thr_vertical.attach(6);  //horizontal
+//!!
   
   thr_left.writeMicroseconds(MOTOR_STOP);
   thr_right.writeMicroseconds(MOTOR_STOP); 
